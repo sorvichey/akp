@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-12 col-sm-12">
-                                <textarea name="description" id="description" rows="6" class="form-control ckeditor" style="width:100%;">
+                                <textarea name="description"​​ id="description" rows="6" class="form-control ckeditor" style="width:100%;">
                                 </textarea>
                             </div>
                         </div>
@@ -99,6 +99,9 @@
         max-height: 800px;
         height: 800px !important;
     }
+    .cke_editable {
+    
+}
 </style>
 @endsection
 @section('js')

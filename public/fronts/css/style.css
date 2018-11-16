@@ -55,6 +55,10 @@ h6 {
   line-height: 1.7;
 font-family: Battambang;
 }
+.youtube-video iframe {
+  width: 100%;
+  height: 400px;
+}
 .d-md-block {
   display: block!important;
   background: #00000073;
@@ -135,6 +139,9 @@ img {
 
 .mb-80 {
   margin-bottom: 80px !important; }
+.youtube-video {
+
+}
 
 .mb-100 {
   margin-bottom: 100px !important; }
@@ -307,22 +314,7 @@ textarea:focus {
   border-color: transparent; }
 
 /* ScrollUp */
-#scrollUp {
-  background-color: #0d56da;
-  border-radius: 0;
-  bottom: 60px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
-  color: #ffffff;
-  font-size: 24px;
-  height: 40px;
-  line-height: 38px;
-  right: 60px;
-  text-align: center;
-  width: 40px;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms; }
-  #scrollUp:hover {
-    background-color: #000000; }
+
     .marquee {
       margin: 0 auto;
       white-space: nowrap;
@@ -1154,11 +1146,17 @@ font-family: Khmer Os Koulen;
   }
   .mt-30 {
     margin-top: 10px !important;
-}
+  }
+  .youtube-video iframe {
+    width: 100%;
+    height: 220px;
+  }
   .text-copyright {
     font-size: 13px;
   } 
+  
 }
 .section-heading-kh > p {
   font-weight: 300;
 }
+

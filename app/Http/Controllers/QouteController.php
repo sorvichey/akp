@@ -14,9 +14,9 @@ class QouteController extends Controller
     // index
     public function index()
     {
-        // if(!Right::check('Qoute', 'l')){
-        //     return view('permissions.no');
-        // }
+        if(!Right::check('Qoute', 'l')){
+            return view('permissions.no');
+        }
         $data['qoutes'] = DB::table('qoutes')
             ->where('active',1)
             ->paginate(18);
@@ -25,17 +25,17 @@ class QouteController extends Controller
     // load create form
     public function create()
     {
-        // if(!Right::check('Qoute', 'i')){
-        //     return view('permissions.no');
-        // }
+        if(!Right::check('Qoute', 'i')){
+            return view('permissions.no');
+        }
         return view('qoutes.create');
     }
     // save new category
     public function save(Request $r)
     {
-        // if(!Right::check('Qoute', 'i')){
-        //     return view('permissions.no');
-        // }
+        if(!Right::check('Qoute', 'i')){
+            return view('permissions.no');
+        }
         $data = array(
             'description' => $r->description,
             'category' => $r->category
@@ -57,18 +57,18 @@ class QouteController extends Controller
 
     public function delete($id)
     {
-        // if(!Right::check('Qoute', 'd')){
-        //     return view('permissions.no');
-        // }
+        if(!Right::check('Qoute', 'd')){
+            return view('permissions.no');
+        }
         DB::table('qoutes')->where('id', $id)->update(['active'=>0]);
         return redirect('/admin/qoute');
     }
 
     public function edit($id)
     {
-        // if(!Right::check('Qoute', 'u')){
-        //     return view('permissions.no');
-        // }
+        if(!Right::check('Qoute', 'u')){
+            return view('permissions.no');
+        }
         $data['qoute'] = DB::table('qoutes')
             ->where('id', $id)
             ->first();
@@ -77,9 +77,9 @@ class QouteController extends Controller
     
     public function update(Request $r)
     {
-        // if(!Right::check('Qoute', 'u')){
-        //     return view('permissions.no');
-        // }
+        if(!Right::check('Qoute', 'u')){
+            return view('permissions.no');
+        }
         $data = array(
             'description' => $r->description,
             'category' => $r->category

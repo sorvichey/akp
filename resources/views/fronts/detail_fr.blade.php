@@ -32,8 +32,10 @@
                                             </ul>
                                         </div>
                                         </span> 
-                                <div class="col-md-12"><br>
+                                <div class="col-md-12">
+                                <div class="youtube-video">
                                     {!!$post->description!!} 
+                                </div>
                                 </div>
                                 </div>
                             </div>
@@ -75,5 +77,6 @@
             </div>
         </div>
     </div>
+
 <br>
 @endsection

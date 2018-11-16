@@ -62,7 +62,6 @@ class FrontController extends Controller
             ->where('active', 1)
             ->where('sub_category_id', 1)
             ->orWhere('sub_category_id', 3)
-            ->orWhere('sub_category_id', 4)
             ->orderBy('pin', 1)
             ->orderBy('id', 'desc')
             ->paginate(15);
