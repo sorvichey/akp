@@ -142,6 +142,20 @@ class Share
     }
 
     /**
+     * Whatsapp share link
+     *
+     * @return $this
+     */
+    public function whatsapp()
+    {
+        $url = config('laravel-share.services.whatsapp.uri') . $this->url;
+
+        $this->buildLink('whatsapp', $url);
+
+        return $this;
+    }
+
+    /**
      * Linked in share link
      *
      * @param string $summary
@@ -154,6 +168,20 @@ class Share
         $url = $base . '?mini=' . $mini . '&url=' . $this->url . '&title=' . urlencode($this->title) . '&summary=' . urlencode($summary);
 
         $this->buildLink('linkedin', $url);
+
+        return $this;
+    }
+
+    /**
+     * Pinterest share link
+     *
+     * @return $this
+     */
+    public function pinterest()
+    {
+        $url = config('laravel-share.services.pinterest.uri') . $this->url;
+
+        $this->buildLink('pinterest', $url);
 
         return $this;
     }
